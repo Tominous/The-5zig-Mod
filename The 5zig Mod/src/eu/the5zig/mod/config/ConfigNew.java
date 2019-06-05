@@ -78,7 +78,7 @@ public class ConfigNew {
 		add(new PlaceholderItem("main"));
 		add(new PlaceholderItem("main"));
 		add(new DisplayScreenItem("cape_settings", "main", GuiCapeSettings.class));
-//		add(new EnumItem<Updater.UpdateType>("autoUpdate", "main", Updater.UpdateType.SAME_VERSION, Updater.UpdateType.class));
+		add(new EnumItem<Updater.UpdateType>("autoUpdate", "main", Updater.UpdateType.SAME_VERSION, Updater.UpdateType.class));
 		add(new DisplayScreenItem("coordinate_clipboard", "main", GuiCoordinatesClipboard.class));
 		add(new DisplayScreenItem("language_screen", "main", GuiLanguage.class) {
 			@Override
@@ -133,14 +133,14 @@ public class ConfigNew {
 				return Utils.getShortenedFloat(get(), 1) + "x";
 			}
 		});
-		/*add(new SliderItem("crosshairDistance", "m", "display", 0, 0, 150, 5) {
+		add(new SliderItem("crosshairDistance", "m", "display", 0, 0, 150, 5) {
 			@Override
 			public String getCustomValue(float value) {
 				if (value == 0)
 					return The5zigMod.toBoolean(false);
 				return super.getCustomValue(value);
 			}
-		});*/
+		});
 
 		add(new BoolItem("showChatSymbols", "display", true));
 		add(new BoolItem("showLastServer", "display", true));
@@ -296,12 +296,12 @@ public class ConfigNew {
 		});
 
 		add(new DisplayCategoryItem("general", "server", "server_general"));
-//		add(new DisplayCategoryItem("timolia", "server", "server_timolia"));
-//		add(new DisplayCategoryItem("playminity", "server", "server_playminity"));
-//		add(new DisplayCategoryItem("gommehd", "server", "server_gommehd"));
-//		add(new DisplayCategoryItem("bergwerk", "server", "server_bergwerk"));
-//		add(new DisplayCategoryItem("mineplex", "server", "server_mineplex"));
-//		add(new DisplayCategoryItem("venicraft", "server", "server_venicraft"));
+		add(new DisplayCategoryItem("timolia", "server", "server_timolia"));
+		add(new DisplayCategoryItem("playminity", "server", "server_playminity"));
+		add(new DisplayCategoryItem("gommehd", "server", "server_gommehd"));
+		add(new DisplayCategoryItem("bergwerk", "server", "server_bergwerk"));
+		add(new DisplayCategoryItem("mineplex", "server", "server_mineplex"));
+		add(new DisplayCategoryItem("venicraft", "server", "server_venicraft"));
 		add(new DisplayCategoryItem("hypixel", "server", "server_hypixel"));
 		add(new StringListItem("highlight_words", "server", Collections.<String>emptyList()));
 		add(new DisplayCategoryItem("2nd_chat", "server", "2nd_chat"));
